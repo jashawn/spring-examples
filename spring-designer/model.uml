@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_hx6bsEx6Eea43tdgrWtOtg" name="spring-bean">
+  <packagedElement xmi:type="uml:Interface" xmi:id="_3z1awEx6Eea43tdgrWtOtg" name="BeanFactory"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_P3lcwEx9Eea43tdgrWtOtg" name="AutowireCapableBeanFactory">
+    <generalization xmi:id="_SolkwEx9Eea43tdgrWtOtg" general="_3z1awEx6Eea43tdgrWtOtg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_d8RfgEx9Eea43tdgrWtOtg" name="HierarchicalBeanFactory">
+    <generalization xmi:id="_qNZS4Ex9Eea43tdgrWtOtg" general="_3z1awEx6Eea43tdgrWtOtg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_g2cxoEx9Eea43tdgrWtOtg" name="ListableBeanFactory">
+    <generalization xmi:id="_qv14oEx9Eea43tdgrWtOtg" general="_3z1awEx6Eea43tdgrWtOtg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_XPNcEEz1EeaZSpbIKHsZNQ" name="ConfigurableBeanFactory">
+    <generalization xmi:id="_cV9TcEz1EeaZSpbIKHsZNQ" general="_d8RfgEx9Eea43tdgrWtOtg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_j3vC0Ez1EeaZSpbIKHsZNQ" name="ConfigurableListableBeanFactory">
+    <generalization xmi:id="_lgxdMEz1EeaZSpbIKHsZNQ" general="_XPNcEEz1EeaZSpbIKHsZNQ"/>
+    <generalization xmi:id="_l4DUwEz1EeaZSpbIKHsZNQ" general="_P3lcwEx9Eea43tdgrWtOtg"/>
+    <generalization xmi:id="_mMbpUEz1EeaZSpbIKHsZNQ" general="_g2cxoEx9Eea43tdgrWtOtg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_4xvXkEz1EeaZSpbIKHsZNQ" name="AbstractBeanFactory">
+    <generalization xmi:id="_qY_V0G_SEeaJH-Le9ARLSQ" general="_izvbsG_SEeaJH-Le9ARLSQ"/>
+    <interfaceRealization xmi:id="_-JmNEEz1EeaZSpbIKHsZNQ" client="_4xvXkEz1EeaZSpbIKHsZNQ" supplier="_XPNcEEz1EeaZSpbIKHsZNQ" contract="_XPNcEEz1EeaZSpbIKHsZNQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="__h2ZcEz1EeaZSpbIKHsZNQ" name="AbstractAutowireCapableBeanFactory">
+    <generalization xmi:id="_LfFAcEz2EeaZSpbIKHsZNQ" general="_4xvXkEz1EeaZSpbIKHsZNQ"/>
+    <interfaceRealization xmi:id="_FO9QwEz3EeaZSpbIKHsZNQ" client="__h2ZcEz1EeaZSpbIKHsZNQ" supplier="_P3lcwEx9Eea43tdgrWtOtg" contract="_P3lcwEx9Eea43tdgrWtOtg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_RlUl8Ez2EeaZSpbIKHsZNQ" name="DefaultListableBeanFactory">
+    <generalization xmi:id="_UbZbMEz2EeaZSpbIKHsZNQ" general="__h2ZcEz1EeaZSpbIKHsZNQ"/>
+    <interfaceRealization xmi:id="_560qEEz2EeaZSpbIKHsZNQ" client="_RlUl8Ez2EeaZSpbIKHsZNQ" supplier="_j3vC0Ez1EeaZSpbIKHsZNQ" contract="_j3vC0Ez1EeaZSpbIKHsZNQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_fi6iMEz2EeaZSpbIKHsZNQ" name="XmlBeanFactory">
+    <generalization xmi:id="_iFz8wEz2EeaZSpbIKHsZNQ" general="_RlUl8Ez2EeaZSpbIKHsZNQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_U_6oEEz3EeaZSpbIKHsZNQ" name="StaticListableBeanFactory">
+    <interfaceRealization xmi:id="_9IWrIEz4EeaZSpbIKHsZNQ" client="_U_6oEEz3EeaZSpbIKHsZNQ" supplier="_g2cxoEx9Eea43tdgrWtOtg" contract="_g2cxoEx9Eea43tdgrWtOtg"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_izvbsG_SEeaJH-Le9ARLSQ" name="FactoryBeanRegistrySupport">
+    <generalization xmi:id="_yVRP4G_SEeaJH-Le9ARLSQ" general="_wDQxAG_SEeaJH-Le9ARLSQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_wDQxAG_SEeaJH-Le9ARLSQ" name="DefaultSingletonBeanRegistry">
+    <generalization xmi:id="_55nLEG_SEeaJH-Le9ARLSQ" general="_4J9yYG_SEeaJH-Le9ARLSQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_4J9yYG_SEeaJH-Le9ARLSQ" name="SimpleAliasRegistry">
+    <generalization xmi:id="_TD30EG_TEeaJH-Le9ARLSQ" general="_Pn-8AG_TEeaJH-Le9ARLSQ"/>
+    <interfaceRealization xmi:id="_GOLUAG_TEeaJH-Le9ARLSQ" client="_4J9yYG_SEeaJH-Le9ARLSQ" supplier="_BR8DgG_TEeaJH-Le9ARLSQ" contract="_BR8DgG_TEeaJH-Le9ARLSQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_BR8DgG_TEeaJH-Le9ARLSQ" name="SingletonBeanRegistry"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_Pn-8AG_TEeaJH-Le9ARLSQ" name="SimpleAliasRegistry">
+    <interfaceRealization xmi:id="_ZX1sgG_TEeaJH-Le9ARLSQ" client="_Pn-8AG_TEeaJH-Le9ARLSQ" supplier="_VRzEMG_TEeaJH-Le9ARLSQ" contract="_VRzEMG_TEeaJH-Le9ARLSQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_VRzEMG_TEeaJH-Le9ARLSQ" name="AliasRegistry"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_582dgHCcEea5a_2DlZcXaA" name="BeanWrapperImpl">
+    <generalization xmi:id="_AwLLcHCdEea5a_2DlZcXaA" general="_9z61sHCcEea5a_2DlZcXaA"/>
+    <interfaceRealization xmi:id="_ZyFwwHCdEea5a_2DlZcXaA" client="_582dgHCcEea5a_2DlZcXaA" supplier="_X1pSMHCdEea5a_2DlZcXaA" contract="_X1pSMHCdEea5a_2DlZcXaA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_9z61sHCcEea5a_2DlZcXaA" name="AbstractNestablePropertyAccessor">
+    <generalization xmi:id="_fUBIQHCdEea5a_2DlZcXaA" general="_dIwxoHCdEea5a_2DlZcXaA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_X1pSMHCdEea5a_2DlZcXaA" name="BeanWrapper">
+    <generalization xmi:id="_YxxRkHJxEeaHJ6g6xdIDnQ" general="_9Wh5oHCdEea5a_2DlZcXaA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_dIwxoHCdEea5a_2DlZcXaA" name="AbstractPropertyAccessor">
+    <generalization xmi:id="_kPRhUHCdEea5a_2DlZcXaA" general="_iJgHoHCdEea5a_2DlZcXaA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_iJgHoHCdEea5a_2DlZcXaA" name="TypeConverterSupport">
+    <generalization xmi:id="_qopeMHCdEea5a_2DlZcXaA" general="_nnKDIHCdEea5a_2DlZcXaA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_nnKDIHCdEea5a_2DlZcXaA" name="PropertyEditorRegistrySupport">
+    <interfaceRealization xmi:id="_wfMa0HCdEea5a_2DlZcXaA" client="_nnKDIHCdEea5a_2DlZcXaA" supplier="_rSwLIHCdEea5a_2DlZcXaA" contract="_rSwLIHCdEea5a_2DlZcXaA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_rSwLIHCdEea5a_2DlZcXaA" name="PropertyEditorRegistry"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_0ipCIHCdEea5a_2DlZcXaA" name="TypeConverter"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_9Wh5oHCdEea5a_2DlZcXaA" name="ConfigurablePropertyAccessor">
+    <generalization xmi:id="_lVtrQHFpEeatBJr75NfJSw" general="_fYwkoHFpEeatBJr75NfJSw"/>
+    <generalization xmi:id="_oOPXkHFpEeatBJr75NfJSw" general="_0ipCIHCdEea5a_2DlZcXaA"/>
+    <generalization xmi:id="_tsXNIHFpEeatBJr75NfJSw" general="_rSwLIHCdEea5a_2DlZcXaA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="__x6W8HCdEea5a_2DlZcXaA" client="_dIwxoHCdEea5a_2DlZcXaA" supplier="_9Wh5oHCdEea5a_2DlZcXaA"/>
+  <packagedElement xmi:type="uml:Abstraction" xmi:id="_FDJnEHCeEea5a_2DlZcXaA" client="_iJgHoHCdEea5a_2DlZcXaA" supplier="_0ipCIHCdEea5a_2DlZcXaA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_PBmNMHCeEea5a_2DlZcXaA" name="ConversionService"/>
+  <packagedElement xmi:type="uml:Usage" xmi:id="_QnTmwHCeEea5a_2DlZcXaA" client="_nnKDIHCdEea5a_2DlZcXaA" supplier="_PBmNMHCeEea5a_2DlZcXaA"/>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_fYwkoHFpEeatBJr75NfJSw" name="PropertyAccessor"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_y64D8HFqEeatBJr75NfJSw" name="DirectFieldAccessor">
+    <generalization xmi:id="_4zjHgHFqEeatBJr75NfJSw" general="_9z61sHCcEea5a_2DlZcXaA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_F4jYkHJgEeaHJ6g6xdIDnQ" name="ConfigurableConversionService">
+    <generalization xmi:id="_HofFIHJgEeaHJ6g6xdIDnQ" general="_PBmNMHCeEea5a_2DlZcXaA"/>
+    <generalization xmi:id="_MlfKoHJgEeaHJ6g6xdIDnQ" general="_IeOaUHJgEeaHJ6g6xdIDnQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_IeOaUHJgEeaHJ6g6xdIDnQ" name="ConverterRegistry"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_WzBVoHJgEeaHJ6g6xdIDnQ" name="GenericConversionService">
+    <generalization xmi:id="_YiWlQHJgEeaHJ6g6xdIDnQ" general="_F4jYkHJgEeaHJ6g6xdIDnQ"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interface" xmi:id="_knd88HJgEeaHJ6g6xdIDnQ" name="Converter"/>
+  <packagedElement xmi:type="uml:Association" xmi:id="_sj7dMHJgEeaHJ6g6xdIDnQ" memberEnd="_sj7dMXJgEeaHJ6g6xdIDnQ _sj7dNHJgEeaHJ6g6xdIDnQ" navigableOwnedEnd="_sj7dNHJgEeaHJ6g6xdIDnQ">
+    <ownedEnd xmi:id="_sj7dMXJgEeaHJ6g6xdIDnQ" name="genericConversionServices" type="_WzBVoHJgEeaHJ6g6xdIDnQ" aggregation="composite" association="_sj7dMHJgEeaHJ6g6xdIDnQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sj7dMnJgEeaHJ6g6xdIDnQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sj7dM3JgEeaHJ6g6xdIDnQ" value="1"/>
+    </ownedEnd>
+    <ownedEnd xmi:id="_sj7dNHJgEeaHJ6g6xdIDnQ" name="converters" type="_knd88HJgEeaHJ6g6xdIDnQ" association="_sj7dMHJgEeaHJ6g6xdIDnQ">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_sj7dNXJgEeaHJ6g6xdIDnQ"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_sj7dNnJgEeaHJ6g6xdIDnQ" value="*"/>
+    </ownedEnd>
+  </packagedElement>
+</uml:Model>
